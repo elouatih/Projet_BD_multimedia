@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RootController">
+  <children>
+    <SplitPane dividerPositions="0.7472160356347439" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+      <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="543.0" prefWidth="659.0">
+        <children>
+          <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Existing elements" textAlignment="CENTER" wrapText="false">
+                     <font>
+                <Font size="18.0" fx:id="x1" />
+                     </font>
+                     <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                     </textFill>
+                  </Label>
+                  <TabPane fx:id="tabPane" layoutX="14.0" layoutY="41.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                     <tabs>
+                        <Tab id="users" closable="false" text="Users">
+                           <content>
+                              <TableView fx:id="usersListView" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn id="email" prefWidth="232.0" text="Email" />
+                                    <TableColumn id="firstName" prefWidth="187.0" text="First Name" />
+                                    <TableColumn id="lastName" prefWidth="168.0" text="Last Name" />
+                                    <TableColumn id="age" prefWidth="75.0" text="Age" />
+                                    <TableColumn id="accessCodeStr" prefWidth="103.0" text="Access Code" />
+                                    <TableColumn id="preferredLanguage" prefWidth="127.0" text="Preferred Language" />
+                                 </columns></TableView>
+                           </content>
+                        </Tab>
+                        <Tab id="films" closable="false" text="Films">
+                           <content>
+                              <TableView fx:id="filmsListView" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn id="title" prefWidth="452.0" text="Title" />
+                                    <TableColumn id="year" prefWidth="85.0" text="Year" />
+                                    <TableColumn id="recommendedAge" prefWidth="130.0" text="Recommended Age" />
+                                    <TableColumn id="categoriesStr" prefWidth="225.0" text="Categories" />
+                                 </columns></TableView>
+                           </content>
+                        </Tab>
+                        <Tab id="tracks" closable="false" text="Tracks">
+                           <content>
+                              <TableView fx:id="tracksListView" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn id="title" prefWidth="151.0" text="Title" />
+                                    <TableColumn id="albumTitle" prefWidth="178.0" text="Album" />
+                                    <TableColumn id="length" minWidth="0.0" prefWidth="115.0" text="Length" />
+                                    <TableColumn id="categories" prefWidth="163.0" text="Catégories" />
+                                    <TableColumn id="musicians" prefWidth="285.0" text="Musicians" />
+                                 </columns></TableView>
+                           </content>
+                        </Tab>
+                        <Tab id="films1" closable="false" text="FilmsUser">
+                           <content>
+                              <TableView fx:id="films1ListView" prefHeight="369.0" prefWidth="892.0">
+                                 <columns>
+                                    <TableColumn id="title" prefWidth="452.0" text="Title" />
+                                    <TableColumn id="year" prefWidth="85.0" text="Year" />
+                                    <TableColumn id="recommendedAge" prefWidth="130.0" text="Recommended Age" />
+                                    <TableColumn id="categoriesStr" prefWidth="225.0" text="Categories" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </Tab>
+                        <Tab id="tracks1" closable="false" text="TracksUser">
+                           <content>
+                              <TableView fx:id="tracks1ListView" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn id="title" prefWidth="151.0" text="Title" />
+                                    <TableColumn id="albumTitle" prefWidth="178.0" text="Album" />
+                                    <TableColumn id="length" minWidth="0.0" prefWidth="115.0" text="Length" />
+                                    <TableColumn id="categories" prefWidth="163.0" text="Catégories" />
+                                    <TableColumn id="musicians" prefWidth="285.0" text="Musicians" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+        </children>
+      </AnchorPane>
+        <AnchorPane>
+          <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Actions" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x5" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.624" green="0.624" red="0.624" fx:id="x6" />
+                     </textFill></Label>
+                  <GridPane fx:id="actionsGridPane" vgap="5.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                      <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                      <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                    </rowConstraints>
+                  </GridPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>
